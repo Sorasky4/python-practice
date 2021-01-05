@@ -21,5 +21,7 @@ class FileManagement:
         self.match = self.regex.search(self.name)
         if self.match is not None:  # パターンマッチすれば0埋めし、今回はpyファイルなので.pyをつける
             self.name = self.match.group(1).zfill(3) + self.match.group(2) + '.py'
+        '''
         else:
-            self.name += '.py'
+            self.name += '.py'  # テストのときだけコメントアウトを外す
+        '''
