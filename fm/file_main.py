@@ -1,11 +1,11 @@
 import os
 import shutil
 from paths import path_abc  # 同フォルダに必要なパスが書かれたファイルを用意
-from file_management import file_management
+from file_management import FileManagement
 
 for foldername, subfolders, filenames in os.walk(path_abc):
     for filename in filenames:
-        file = file_management()
+        file = FileManagement()
         file.path = foldername + '\\' + filename
         file.name = filename
         file.zero_padding()
